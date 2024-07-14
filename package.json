@@ -1,0 +1,40 @@
+{
+  "name": "upid-ts",
+  "version": "0.1.4",
+  "description": "Universally Unique Prefixed Lexicographically Sortable Identifier",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "/dist"
+  ],
+  "scripts": {
+    "fmt": "prettier --write src/*.ts",
+    "lint": "eslint src/*.ts",
+    "test": "vitest run src/**",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/carderne/upid-ts.git"
+  },
+  "author": "Chris Arderne <chris@rdrn.me>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/carderne/upid-ts/issues"
+  },
+  "homepage": "https://github.com/carderne/upid-ts",
+  "devDependencies": {
+    "@eslint/js": "^9.7.0",
+    "@types/eslint__js": "^8.42.3",
+    "@types/node": "^20.14.10",
+    "@typescript-eslint/eslint-plugin": "^7.16.0",
+    "@typescript-eslint/parser": "^7.16.0",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "prettier": "^3.3.3",
+    "typescript": "^5.5.3",
+    "typescript-eslint": "^7.16.0",
+    "vitest": "^2.0.2"
+  }
+}

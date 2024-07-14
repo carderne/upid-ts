@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>upid</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link href="tw.css" rel="stylesheet"/>
+</head>
+<body class="bg-slate-800 h-screen flex flex-col items-center justify-center">
+    <div class="max-w-md mx-auto text-center text-pink-100">
+        <div class="text-2xl flex flex-col my-4 text-left w-max m-auto">
+          <div>1. enter a prefix</div>
+          <div>2. get your upid</div>
+        </div>
+        <div id="prefix" class="flex items-center justify-center text-pink-300 text-2xl font-extrabold">
+            <input
+                type="text"
+                class="w-16 h-16 text-center bg-slate-800 border border-pink-100 border-r-0
+                       appearance-none p-4 outline-none focus:border-2 rounded-l-lg
+                pattern="[a-z]{1}"
+                maxlength="1"
+            />
+            <input
+                type="text"
+                class="w-16 h-16 text-center bg-slate-800 border border-pink-100 border-r-0
+                       appearance-none p-4 outline-none focus:border-2"
+                pattern="[a-z]{1}"
+                maxlength="1"
+            />
+            <input
+                type="text"
+                class="w-16 h-16 text-center bg-slate-800 border border-pink-100 border-r-0
+                       appearance-none p-4 outline-none focus:border-2"
+                pattern="[a-z]{1}"
+                maxlength="1"
+            />
+            <input
+                type="text"
+                class="w-16 h-16 text-center bg-slate-800 border border-pink-100
+                       appearance-none p-4 outline-none focus:border-2 rounded-r-lg"
+                pattern="[a-z]{1}"
+                maxlength="1"
+            />
+        </div>
+        <div id="encoded" class="p-4 text-center mx-auto font-mono">&nbsp;</div>
+        <div class="text-lg underline mt-16 hover:text-pink-400">
+          <a href="https://github.com/carderne/upid">what is a upid?</a>
+        </div>
+    </div>
+</body>
+
+<script type="module" src="main.js"></script>
+
+</html>

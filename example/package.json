@@ -1,0 +1,11 @@
+{
+  "name": "upid-example",
+  "version": "0.0.1",
+  "scripts": {
+    "tw": "tailwindcss -i tailwind.css -o tw.css --watch --minify"
+  },
+  "devDependencies": {
+    "postcss": "^8.4.39",
+    "tailwindcss": "^3.4.4"
+  }
+}
