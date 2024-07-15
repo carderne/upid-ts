@@ -37,7 +37,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const prefix = document.getElementById("prefix");
   const encoded = document.getElementById("encoded");
   const updateEncoded = () => {
-    const val = prefix.value ?? "";
+    const val = (prefix.value ?? "").toLowerCase();
+    prefix.value = val;
     const u = upid(val);
     encoded.innerText = u.toStr();
   };
