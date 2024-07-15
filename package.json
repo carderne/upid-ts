@@ -1,6 +1,6 @@
 {
   "name": "upid-ts",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Universally Unique Prefixed Lexicographically Sortable Identifier",
   "type": "module",
   "main": "dist/index.js",
