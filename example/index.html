@@ -12,10 +12,7 @@
     <div>1. enter a prefix</div>
     <div>2. get your upid</div>
   </div>
-  <input
-      id="prefix"
-      type="text"
-      maxlength="4"
+  <input id="prefix" type="text" maxlength="4"
       class="w-64 h-16 px-4 pl-8 pr-4 my-4
              text-pink-300 text-center text-2xl font-extrabold tracking-[1.4em]
              bg-slate-800 border border-pink-100 rounded-lg
@@ -23,35 +20,33 @@
   />
   <div id="encoded" class="w-64 my-4 text-center mx-auto font-mono">&nbsp;</div>
   <div id="binary" class="w-64 my-4 text-xs text-center mx-auto font-mono">&nbsp;</div>
+  <script type="module">
+  import { upid } from "https://unpkg.com/upid-ts";
+  function uint8ArrayToBinaryString(uint8Array) {
+      let result = "";
+      for (let i = 0; i < uint8Array.length; i++) {
+          if (i > 0) result += " ";
+          result += uint8Array[i].toString(2).padStart(8, "0");
+      }
+      return result;
+  }
+  document.addEventListener("DOMContentLoaded", () => {
+    const prefix = document.getElementById("prefix");
+    const encoded = document.getElementById("encoded");
+    const binary = document.getElementById("binary");
+    const updateEncoded = () => {
+      const val = (prefix.value ?? "").toLowerCase();
+      prefix.value = val;
+      const u = upid(val);
+      encoded.innerText = u.toStr();
+      binary.innerText = uint8ArrayToBinaryString(u.b);
+
+    };
+    prefix.addEventListener("input", updateEncoded);
+    updateEncoded();
+    prefix.focus();
+  });
+  </script>
   <a class="text-lg underline mt-16 hover:text-pink-400" href="https://github.com/carderne/upid">what is a upid?</a>
 </body>
-
-<script type="module">
-import { upid } from "https://unpkg.com/upid-ts";
-function uint8ArrayToBinaryString(uint8Array) {
-    let result = "";
-    for (let i = 0; i < uint8Array.length; i++) {
-        if (i > 0) result += " ";
-        result += uint8Array[i].toString(2).padStart(8, '0');
-    }
-    return result;
-}
-document.addEventListener("DOMContentLoaded", () => {
-  const prefix = document.getElementById("prefix");
-  const encoded = document.getElementById("encoded");
-  const binary = document.getElementById("binary");
-  const updateEncoded = () => {
-    const val = (prefix.value ?? "").toLowerCase();
-    prefix.value = val;
-    const u = upid(val);
-    encoded.innerText = u.toStr();
-    binary.innerText = uint8ArrayToBinaryString(u.b);
-
-  };
-  prefix.addEventListener("input", updateEncoded);
-  updateEncoded();
-  prefix.focus();
-});
-</script>
-
 </html>
