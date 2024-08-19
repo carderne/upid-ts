@@ -1,0 +1,13 @@
+{
+  "name": "upid-example-postgres",
+  "version": "0.0.1",
+  "dependencies": {
+    "pg": "^8.12.0",
+    "upid-ts": "^0.1.9"
+  },
+  "devDependencies": {
+    "@types/node": "^22.4.1",
+    "@types/pg": "^8.11.6",
+    "typescript": "^5.5.4"
+  }
+}
