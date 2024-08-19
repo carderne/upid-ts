@@ -19,7 +19,7 @@ You can give it a spin at [upid.rdrn.me](https://upid.rdrn.me/).
 ## Installation
 With a build step:
 ```bash
-npm install --save upid
+npm install --save upid-ts
 ```
 
 Directly in a browser:

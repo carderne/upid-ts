@@ -136,6 +136,10 @@ class UPID {
   toStr(): string {
     return encode(this.b);
   }
+
+  toBinary(): Uint8Array {
+    return this.b;
+  }
 }
 
 function intToBytes(value: bigint, length: number): Uint8Array {
